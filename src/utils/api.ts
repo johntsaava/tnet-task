@@ -96,7 +96,7 @@ export type Location = {
 export async function fetchCoordinatesByCityName(
   cityName: string
 ): Promise<LocationsData> {
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${
     import.meta.env.VITE_WEATHER_API_KEY
   }`;
 
