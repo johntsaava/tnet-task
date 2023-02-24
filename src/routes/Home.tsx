@@ -48,17 +48,25 @@ export function Home() {
       >
         <source src="bermuda-triangle.mp4" type="video/mp4" />
       </video>
-      <div className="flex h-96 w-full max-w-xl flex-col gap-5 rounded-xl">
+      <div className="z-10 flex h-96 w-full max-w-xl flex-col gap-5 rounded-xl">
         <form
-          className="flex flex-col"
+          className="relative"
           onSubmit={(e) => {
             e.preventDefault();
           }}
         >
           <input
+            type="search"
             placeholder="City name"
-            className="z-10 rounded bg-white/70 px-10 py-5 shadow-xl backdrop-blur-sm"
+            className="w-full rounded bg-white/70 px-10 py-5 shadow-xl backdrop-blur-sm"
             onChange={debouncedHandleChange}
+          />
+          <img
+            src="/magnifying-glass.svg"
+            alt="Magnifying glass"
+            width="24"
+            height="24"
+            className="pointer-events-none absolute right-10 top-1/2 -translate-y-1/2"
           />
         </form>
 
@@ -67,7 +75,7 @@ export function Home() {
             <div className="flex flex-col justify-between">
               {data.weather.map((weather) => (
                 <div key={weather.id}>
-                  <p>{city ? city.name : data.name}</p>
+                  <p>{city ? `${city.name}, ${city.country}` : data.name}</p>
                   <h1 className="text-5xl">{weather.main}</h1>
                   <div className="flex items-center">
                     <p className="text-xl font-light">{weather.description}</p>
