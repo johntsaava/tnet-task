@@ -48,7 +48,7 @@ export function Home() {
       >
         <source src="bermuda-triangle.mp4" type="video/mp4" />
       </video>
-      <div className="z-10 flex h-96 w-full max-w-xl flex-col gap-5 rounded-xl">
+      <div className="z-10 flex min-h-[32rem] w-full max-w-xl flex-col gap-5 rounded-xl">
         <form
           className="relative"
           onSubmit={(e) => {
@@ -71,7 +71,7 @@ export function Home() {
         </form>
 
         {data && (
-          <div className="grid animate-fade-in grid-cols-2 rounded bg-white/70 px-10 pt-5 pb-10 shadow-xl backdrop-blur-sm duration-500">
+          <div className="grid animate-fade-in grid-cols-1 gap-5 rounded bg-white/70 px-10 pt-5 pb-10 shadow-xl backdrop-blur-sm duration-500 md:grid-cols-2 md:gap-0">
             <div className="flex flex-col justify-between">
               {data.weather.map((weather) => (
                 <div key={weather.id}>
