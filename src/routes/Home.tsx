@@ -13,7 +13,7 @@ export function Home() {
     fetchCoordinatesByCityName
   );
   const city = cities?.[0];
-  const { position } = useGeolocation();
+  const { position, error } = useGeolocation();
   const { data } = useSWR(
     city
       ? {
@@ -69,6 +69,10 @@ export function Home() {
             className="pointer-events-none absolute right-10 top-1/2 -translate-y-1/2"
           />
         </form>
+
+        {error?.message && (
+          <p className="font-light text-white">{error.message}</p>
+        )}
 
         {data && (
           <div className="grid animate-fade-in grid-cols-1 gap-5 rounded bg-white/70 px-10 pt-5 pb-10 shadow-xl backdrop-blur-sm duration-500 md:grid-cols-2 md:gap-0">
