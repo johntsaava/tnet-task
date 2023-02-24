@@ -97,19 +97,19 @@ export function Home() {
               </WeatherInfo.Item>
               <WeatherInfo.Item>
                 <WeatherInfo.Label>Humidity:</WeatherInfo.Label>
-                <WeatherInfo.Value>{data.main.humidity}</WeatherInfo.Value>
+                <WeatherInfo.Value>{data.main.humidity}%</WeatherInfo.Value>
               </WeatherInfo.Item>
               <WeatherInfo.Item>
                 <WeatherInfo.Label>Sea Level:</WeatherInfo.Label>
-                <WeatherInfo.Value>{data.main.pressure}</WeatherInfo.Value>
+                <WeatherInfo.Value>{data.main.pressure} hPa</WeatherInfo.Value>
               </WeatherInfo.Item>
               <WeatherInfo.Item>
                 <WeatherInfo.Label>Wind Speed:</WeatherInfo.Label>
-                <WeatherInfo.Value>{data.wind.speed}</WeatherInfo.Value>
+                <WeatherInfo.Value>{data.wind.speed} m/s</WeatherInfo.Value>
               </WeatherInfo.Item>
               <WeatherInfo.Item>
                 <WeatherInfo.Label>Visibility:</WeatherInfo.Label>
-                <WeatherInfo.Value>{data.visibility}</WeatherInfo.Value>
+                <WeatherInfo.Value>{data.visibility} m</WeatherInfo.Value>
               </WeatherInfo.Item>
             </WeatherInfo.Root>
           </div>
