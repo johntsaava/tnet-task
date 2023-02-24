@@ -56,7 +56,7 @@ export function Home() {
           }}
         >
           <input
-            type="search"
+            type="text"
             placeholder="City name"
             className="w-full rounded bg-white/70 px-10 py-5 shadow-xl backdrop-blur-sm"
             onChange={debouncedHandleChange}
